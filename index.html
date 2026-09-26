@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="theme-color" content="#090d0b" />
+    <meta name="description" content="Serpent — an SGP pocket arcade classic." />
+    <title>SERPENT — SGP Pocket Arcade</title>
+    <link rel="icon" href="sgp-icon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="shell" aria-label="Serpent game">
+      <header class="brandbar">
+        <a class="sgp-mark" href="https://sgp.technology" target="_blank" rel="noreferrer" aria-label="SGP Digital Solutions">
+          <img src="sgp-logo.png" alt="SGP Digital Solutions" />
+        </a>
+        <span class="series">POCKET ARCADE / 01</span>
+      </header>
+
+      <section class="game-card">
+        <div class="title-row">
+          <div>
+            <p class="eyebrow">SGP DIGITAL SOLUTIONS PRESENTS</p>
+            <h1>SERPENT<span class="title-dot">.</span></h1>
+          </div>
+          <div class="scoreboard" aria-live="polite">
+            <div><span>SCORE</span><strong id="score">0000</strong></div>
+            <div><span>BEST</span><strong id="best">0000</strong></div>
+          </div>
+        </div>
+
+        <div class="screen-frame">
+          <div class="screen-top"><span>SGP DIGITAL // SERPENT OS</span><span id="status">READY</span></div>
+          <div class="screen-wrap">
+            <canvas id="game" width="360" height="360" aria-label="Serpent game board"></canvas>
+            <div class="overlay" id="overlay">
+              <div class="snake-glyph" aria-hidden="true">▰▰▰<i></i></div>
+              <p id="message">PRESS START</p>
+              <button id="start" type="button"><img src="sgp-icon.png" alt="" /> START GAME</button>
+              <small>ARROW KEYS / CONTROLS BELOW</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls" aria-label="Directional controls">
+          <button class="key up" data-direction="up" aria-label="Move up">↑</button>
+          <button class="key left" data-direction="left" aria-label="Move left">←</button>
+          <div class="key-center" aria-hidden="true"><span></span></div>
+          <button class="key right" data-direction="right" aria-label="Move right">→</button>
+          <button class="key down" data-direction="down" aria-label="Move down">↓</button>
+        </div>
+        <p class="hint"><span>MOVE</span> ARROW KEYS &nbsp;•&nbsp; <span>PAUSE</span> SPACE</p>
+      </section>
+      <footer>BUILT BY SGP DIGITAL SOLUTIONS <span>© SGP 2026</span></footer>
+    </main>
+    <script type="module" src="game.js"></script>
+  </body>
+</html>
